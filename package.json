@@ -1,0 +1,25 @@
+{
+  "name": "playwright-cucumber-experiment",
+  "version": "1.0.0",
+  "description": "Playwright E2E experiment with Cucumber.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "lint": "eslint --fix ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.9.0",
+    "@playwright/test": "^1.28.1",
+    "import": "^0.0.6",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3"
+  }
+}
