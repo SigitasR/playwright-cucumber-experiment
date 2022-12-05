@@ -5,7 +5,7 @@ Feature: URLs
   Background:
     Given I navigate to "https://nordvpn.com"
 
-  Scenario Outline:
+  Scenario Outline: Verify URLs
     When I click on "<string>" link
     Then page URL should contain "<text>"
 

@@ -3,5 +3,6 @@ module.exports = {
         publishQuiet: true,
         requireModule: ['ts-node/register'],
         require: ['src/steps/**/*.ts', 'src/hooks/*.ts'],
+        format: ['./src/allure/reporter.ts'],
     },
 };

@@ -12,12 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "@cucumber/cucumber": "^8.9.0",
-    "@playwright/test": "^1.28.1",
+    "@types/chai": "^4.3.4",
+    "chai": "^4.3.7",
     "import": "^0.0.6",
+    "playwright": "^1.28.1",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "allure-cucumberjs": "^2.0.0-beta.20",
+    "allure-js-commons": "^2.0.0-beta.20",
     "eslint": "^8.29.0",
     "prettier": "^2.8.0",
     "typescript": "^4.9.3"

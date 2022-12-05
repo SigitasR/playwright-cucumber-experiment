@@ -1,6 +1,7 @@
 import { FrontPage } from './FrontPage';
 import { PricingPage } from './PricingPage';
-import { Page } from '@playwright/test';
+import { Page } from 'playwright';
+import { expect } from 'chai';
 
 export class WebApp {
     front: FrontPage;
@@ -14,5 +15,10 @@ export class WebApp {
     async open(url: string) {
         await this.page.goto(url);
         await this.page.waitForLoadState('domcontentloaded');
+    }
+
+    expectAppUrlToContain(expected: string) {
+        const url = this.page.url();
+        expect(url, `Expecting ${url} to contain ${expected}`).to.contain(expected);
     }
 }

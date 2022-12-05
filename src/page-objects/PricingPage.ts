@@ -1,5 +1,6 @@
-import { expect, Locator, Page } from '@playwright/test';
+import { Locator, Page } from 'playwright';
 import { BasePage } from './BasePage';
+import { expect } from 'chai';
 
 export class PricingPage extends BasePage {
     private pricePillNavigation: Locator;
@@ -10,6 +11,6 @@ export class PricingPage extends BasePage {
     }
 
     expectPricePillNavigationToBeVisible = async () => {
-        await expect(this.pricePillNavigation).toBeVisible();
+        expect(await this.pricePillNavigation.isVisible(), 'Expecting price navigation to be visible').to.be.false;
     };
 }

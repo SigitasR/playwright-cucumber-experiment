@@ -1,8 +1,9 @@
-import { Browser, BrowserContext, chromium, Page } from '@playwright/test';
-import { IWorldOptions, World } from '@cucumber/cucumber';
+import { Browser, BrowserContext, chromium, Page } from 'playwright';
+import { IWorldOptions } from '@cucumber/cucumber';
 import { WebApp } from '../page-objects/WebApp';
+import { CucumberAllureWorld } from 'allure-cucumberjs';
 
-export class CustomWorld extends World {
+export class CustomWorld extends CucumberAllureWorld {
     browser?: Browser;
     context?: BrowserContext;
     page?: Page;
