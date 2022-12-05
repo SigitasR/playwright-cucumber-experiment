@@ -17,6 +17,6 @@ Then('I should see price table', async function (this: CustomWorld) {
     await this.webApp?.pricing.expectPricePillNavigationToBeVisible();
 });
 Then('page URL should contain {string}', async function (this: CustomWorld, urlPart: string) {
-    await this.page?.waitForLoadState('networkidle')
+    await this.page?.waitForLoadState('networkidle');
     await expect(this.page?.url()).toContain(urlPart);
 });
