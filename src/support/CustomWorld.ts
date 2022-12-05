@@ -18,6 +18,7 @@ export class CustomWorld extends World {
         await this.initBrowser();
         await this.initWebApp();
     }
+
     async initBrowser() {
         this.browser = await chromium.launch({ headless: false });
         this.context = await this.browser.newContext({
@@ -31,7 +32,7 @@ export class CustomWorld extends World {
             this.webApp = new WebApp(this.page);
             return;
         }
-        throw new Error('CustomWorld.initWebApp() must be called after CustomWorld.init()');
+        throw new Error('CustomWorld.initWebApp() must be called after CustomWorld.initBrowser()');
     }
 
     async closeBrowser() {
